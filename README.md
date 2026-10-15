@@ -1,6 +1,6 @@
-# Local Static Publisher – Local Add-on Prototype
+# Local Static Publisher – Local Add-on
 
-A prototype add-on for Local by Flywheel that renders a running local WordPress website as static files and optionally publishes it via SFTP or GitHub. The site only needs to provide fully renderable pages and assets in the browser.
+An add-on for Local by Flywheel that renders a running local WordPress website as static files and optionally publishes it via SFTP or GitHub. The site only needs to provide fully renderable pages and assets in the browser.
 
 ## Features
 
@@ -20,7 +20,25 @@ A prototype add-on for Local by Flywheel that renders a running local WordPress 
 
 Forms, AJAX, authenticated content, client-side data loading, and complex URL/plugin-specific edge cases are intentionally not included yet.
 
-## Local development installation
+## Installation
+
+### Install a released build
+
+1. Open the [latest GitHub release](https://github.com/electricarts/local-static-publisher/releases/latest).
+2. Download the `local-static-publisher-<version>.tgz` asset.
+3. Extract the archive. It contains the `local-static-publisher` add-on folder.
+4. Copy that folder to Local's add-ons directory. On macOS, use:
+
+   ```text
+   ~/Library/Application Support/Local/addons/local-static-publisher
+   ```
+
+   On Windows and Linux, use the per-user add-on directory documented by Local.
+5. Restart Local and enable Local Static Publisher in the add-ons list.
+
+The release archive already contains the compiled JavaScript and bundled runtime dependencies. No npm installation or build step is required.
+
+### Build from source
 
 ```bash
 npm install
@@ -53,7 +71,7 @@ For SFTP, select “SSH agent (1Password)” in the profile. The private key rem
 
 Alternatively, select “SSH config / default key (~/.ssh)”. This option reads matching `Host`, `HostName`, `User`, `Port`, `IdentityFile`, and `IdentityAgent` entries from `~/.ssh/config`. Without a matching entry, it checks `id_ed25519`, `id_ecdsa`, `id_rsa`, and `id_dsa` in `~/.ssh`. The private key is read only during the export and is not stored in the target profile.
 
-## Known prototype limitations
+## Known limitations
 
 - Password and private-key profiles are currently stored in a local file with restrictive file permissions. When using an SSH agent, no private key is stored in the target profile. A production version should use the operating system keychain.
 - The SFTP transport synchronizes new and changed files but does not yet remove obsolete remote files.
@@ -63,4 +81,4 @@ Alternatively, select “SSH config / default key (~/.ssh)”. This option reads
 
 ## Responsive Local layout
 
-The publisher is rendered as its own page inside the site view. For narrow Local windows, the prototype also includes a responsive rule for the known mkcert panel: below 1180 px, mkcert may wrap below the Overview column. This rule is intentionally limited to the current mkcert layout and should be reviewed if the mkcert add-on changes.
+The publisher is rendered as its own page inside the site view. For narrow Local windows, it includes a responsive rule for the known mkcert panel: below 1180 px, mkcert may wrap below the Overview column. This rule is intentionally limited to the current mkcert layout and should be reviewed if the mkcert add-on changes.

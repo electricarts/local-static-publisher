@@ -2,7 +2,7 @@
   "name": "local-static-publisher",
   "productName": "Local Static Publisher",
   "version": "0.17.5",
-  "description": "Prototype Local add-on for exporting WordPress sites as static files.",
+  "description": "Local add-on for exporting WordPress sites as static files.",
   "keywords": ["local-addon", "wordpress", "static-site", "sftp", "github"],
   "license": "MIT",
   "main": "lib/main.js",

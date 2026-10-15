@@ -1,6 +1,6 @@
 # Local Static Publisher – Local Add-on Prototype
 
-A prototype add-on for Local by Flywheel that renders a running local WordPress website as static files and optionally publishes it via SFTP or GitHub. It is not limited to Etch: the site only needs to provide fully renderable pages and assets in the browser.
+A prototype add-on for Local by Flywheel that renders a running local WordPress website as static files and optionally publishes it via SFTP or GitHub. The site only needs to provide fully renderable pages and assets in the browser.
 
 ## Features
 
@@ -10,7 +10,7 @@ A prototype add-on for Local by Flywheel that renders a running local WordPress 
 - Exports HTML pages, linked pages, stylesheets, scripts, images, and CSS assets
 - Uses the WordPress sitemap as an additional URL source
 - Rewrites the local origin URL to the public target URL
-- Detects URLs embedded in inline JavaScript/CSS and dynamically loaded Elementor chunks
+- Detects URLs embedded in inline JavaScript/CSS and dynamically loaded JavaScript chunks
 - Creates a local build with `export-manifest.json`
 - Saved SFTP target profiles
 - SFTP authentication via password, private key, or SSH agent, including 1Password

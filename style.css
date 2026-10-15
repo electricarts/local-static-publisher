@@ -1,0 +1,425 @@
+.esp-route-page {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  background: transparent;
+}
+
+.esp-route-page .esp-panel {
+  min-height: 100%;
+  border-top: 0;
+}
+
+.esp-route-state {
+  margin: 30px;
+  color: #c7c4c4;
+  font-size: 14px;
+}
+
+/* SiteInfoInnerPane is a CSS-module class in Local, hence the attribute
+   selector. This is the site-info flex pane that contains the overview table
+   and add-on panels. */
+.SiteInfoInnerPane,
+[class*="SiteInfoInnerPane"] {
+  display: flex;
+  flex-wrap: wrap !important;
+  align-content: flex-start;
+  overflow-x: hidden;
+}
+
+.esp-panel {
+  --esp-panel-bg: #303031;
+  --esp-field-bg: #262727;
+  --esp-panel-alt: #383839;
+  --esp-border: #434344;
+  --esp-border-strong: #5d5e5e;
+  --esp-text: #e7e7e7;
+  --esp-muted: #c7c4c4;
+  --esp-subtle: #9f9c9c;
+  --esp-green: #51bb7b;
+  --esp-green-hover: #4bac72;
+  --esp-error: #f18085;
+
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 24px 30px 26px;
+  color: var(--esp-text);
+  background: var(--esp-panel-bg);
+  border-top: 2px solid var(--esp-border);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.Theme__Light .esp-panel {
+  --esp-panel-bg: #fff;
+  --esp-field-bg: #fff;
+  --esp-panel-alt: #f7f6f6;
+  --esp-border: #e7e7e7;
+  --esp-border-strong: #9f9c9c;
+  --esp-text: #262727;
+  --esp-muted: #5d5e5e;
+  --esp-subtle: #7a7777;
+  --esp-error: #ba3e51;
+}
+
+.esp-panel *,
+.esp-panel button,
+.esp-panel input,
+.esp-panel select,
+.esp-panel textarea {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.esp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.esp-panel h2,
+.esp-panel h3,
+.esp-panel p {
+  margin-top: 0;
+}
+
+.esp-panel h2 {
+  margin-bottom: 4px;
+  color: var(--esp-text);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.esp-panel h3 {
+  margin-bottom: 12px;
+  color: var(--esp-text);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.esp-panel p {
+  margin-bottom: 0;
+  color: var(--esp-muted);
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.esp-status {
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  color: var(--esp-muted);
+  background: var(--esp-panel-alt);
+  border: 1px solid var(--esp-border);
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.esp-status.is-running {
+  color: #262727;
+  background: var(--esp-green);
+  border-color: var(--esp-green);
+}
+
+.esp-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(300px, 1.4fr) 120px;
+  gap: 16px;
+  align-items: end;
+}
+
+.esp-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--esp-muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.esp-panel input,
+.esp-panel select,
+.esp-panel textarea {
+  min-height: 36px;
+  width: 100%;
+  padding: 0 10px;
+  color: var(--esp-text);
+  background: var(--esp-field-bg);
+  border: 1px solid var(--esp-border-strong);
+  border-radius: 4px;
+  outline: none;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.esp-panel textarea {
+  min-height: 76px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  resize: vertical;
+}
+
+.esp-panel input::placeholder,
+.esp-panel textarea::placeholder {
+  color: var(--esp-subtle);
+}
+
+.esp-panel input:focus,
+.esp-panel select:focus,
+.esp-panel textarea:focus {
+  border-color: var(--esp-green);
+  box-shadow: 0 0 0 1px var(--esp-green);
+}
+
+.esp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.esp-panel button {
+  cursor: pointer;
+  border: 0;
+  font-size: 13px;
+}
+
+.esp-primary,
+.esp-secondary,
+.esp-danger {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.esp-primary {
+  color: #262727;
+  background: var(--esp-green);
+}
+
+.esp-primary:hover:not(:disabled) {
+  background: var(--esp-green-hover);
+}
+
+.esp-secondary {
+  color: var(--esp-text);
+  background: var(--esp-panel-alt);
+  border: 1px solid var(--esp-border-strong) !important;
+}
+
+.esp-secondary:hover:not(:disabled) {
+  background: var(--esp-border);
+}
+
+.esp-danger {
+  color: var(--esp-error);
+  background: transparent;
+  border: 1px solid var(--esp-error) !important;
+}
+
+.esp-panel button:disabled {
+  cursor: default;
+  opacity: .55;
+}
+
+.esp-log {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 12px 14px;
+  color: var(--esp-muted);
+  background: var(--esp-field-bg);
+  border: 1px solid var(--esp-border);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.esp-log strong {
+  color: var(--esp-text);
+  font-weight: 500;
+}
+
+.esp-progress {
+  flex-basis: 100%;
+  height: 6px;
+  overflow: hidden;
+  background: var(--esp-panel-alt);
+  border: 1px solid var(--esp-border);
+  border-radius: 999px;
+}
+
+.esp-progress-bar {
+  height: 100%;
+  min-width: 0;
+  background: var(--esp-green);
+  border-radius: inherit;
+  transition: width .2s ease;
+}
+
+.esp-progress.is-indeterminate .esp-progress-bar {
+  width: 36%;
+  animation: esp-progress-indeterminate 1.2s ease-in-out infinite;
+}
+
+.esp-progress-count {
+  color: var(--esp-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes esp-progress-indeterminate {
+  0% { transform: translateX(-120%); }
+  50% { transform: translateX(120%); }
+  100% { transform: translateX(280%); }
+}
+
+.esp-log.is-error {
+  color: var(--esp-error);
+  border-color: var(--esp-error);
+}
+
+.esp-log.is-error strong {
+  color: var(--esp-error);
+}
+
+.esp-log code {
+  flex-basis: 100%;
+  overflow: hidden;
+  color: var(--esp-subtle);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.esp-log a {
+  color: var(--esp-green);
+}
+
+.esp-warning {
+  flex-basis: 100%;
+  padding: 8px 10px;
+  color: #f0c36a;
+  background: rgba(240, 195, 106, .08);
+  border: 1px solid rgba(240, 195, 106, .45);
+  border-radius: 3px;
+}
+
+.esp-profiles {
+  display: grid;
+  grid-template-columns: minmax(220px, .8fr) minmax(320px, 1.4fr);
+  gap: 28px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--esp-border);
+}
+
+.esp-profile-list,
+.esp-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.esp-profile-list > h3 {
+  margin-bottom: 36px;
+}
+
+.esp-profile-list > p {
+  color: var(--esp-subtle);
+}
+
+.esp-profile-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  text-align: left;
+  background: var(--esp-field-bg);
+  border: 1px solid var(--esp-border) !important;
+  border-radius: 4px;
+}
+
+.esp-profile-row:hover {
+  border-color: var(--esp-border-strong) !important;
+}
+
+.esp-profile-row.is-selected {
+  border-color: var(--esp-green) !important;
+}
+
+.esp-profile-row span {
+  overflow: hidden;
+  color: var(--esp-text);
+  font-size: 13px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.esp-profile-row small {
+  overflow: hidden;
+  color: var(--esp-subtle);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.esp-profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.esp-help {
+  margin-top: -4px;
+  color: var(--esp-subtle);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.esp-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .esp-grid,
+  .esp-profiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The current mkcert add-on exposes its panel as a width-clamped section in
+   Local's SiteInfoOverview flex row. Let that panel wrap below the overview
+   table once the available width becomes too narrow. */
+@media (max-width: 1180px) {
+  .SiteInfoOverview,
+  [class*="SiteInfoOverview"],
+  .SiteInfoInnerPane,
+  [class*="SiteInfoInnerPane"] {
+    flex-wrap: wrap !important;
+  }
+
+  .SiteInfoOverview > section[style*="clamp(360px"],
+  [class*="SiteInfoOverview"] > section[style*="clamp(360px"],
+  .SiteInfoInnerPane > section[style*="clamp(360px"],
+  [class*="SiteInfoInnerPane"] > section[style*="clamp(360px"] {
+    align-self: stretch !important;
+    flex: 0 1 100% !important;
+    width: 100% !important;
+    max-width: none !important;
+    order: 2;
+    padding: 24px 30px !important;
+  }
+}

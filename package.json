@@ -1,0 +1,40 @@
+{
+  "name": "local-static-publisher",
+  "productName": "Local Static Publisher",
+  "version": "0.17.5",
+  "description": "Prototype Local add-on for exporting WordPress sites as static files.",
+  "keywords": ["local-addon", "wordpress", "static-site", "sftp", "github"],
+  "license": "MIT",
+  "main": "lib/main.js",
+  "renderer": "lib/renderer.js",
+  "icon": "icon.svg",
+  "bgColor": "#51BB7B",
+  "engines": {
+    "local-by-flywheel": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "watch": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@getflywheel/local-components": "^17.8.2",
+    "cheerio": "^1.1.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ssh2-sftp-client": "^11.0.0"
+  },
+  "devDependencies": {
+    "@getflywheel/local": "^10.1.1",
+    "@types/node": "^24.7.2",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.8.3"
+  },
+  "bundledDependencies": [
+    "@getflywheel/local-components",
+    "cheerio",
+    "ssh2-sftp-client"
+  ]
+}

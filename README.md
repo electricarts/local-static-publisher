@@ -2,6 +2,10 @@
 
 An add-on for Local by Flywheel that renders a running local WordPress website as static files and optionally publishes it via SFTP or GitHub. The site only needs to provide fully renderable pages and assets in the browser.
 
+## Interface
+
+![Local Static Publisher in Local](docs/static-publisher.png)
+
 ## Features
 
 - Dedicated “Static Export” button in Local’s site view

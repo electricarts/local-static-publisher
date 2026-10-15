@@ -76,7 +76,3 @@ Alternatively, select “SSH config / default key (~/.ssh)”. This option reads
 - The GitHub transport requires the target branch to already exist.
 - GitHub versions the static output, not the editable WordPress data structure.
 - URL discovery is crawler-based and needs additional rules for multilingual sites, special routes, and large archives.
-
-## Responsive Local layout
-
-The publisher is rendered as its own page inside the site view. For narrow Local windows, it includes a responsive rule for the known mkcert panel: below 1180 px, mkcert may wrap below the Overview column. This rule is intentionally limited to the current mkcert layout and should be reviewed if the mkcert add-on changes.

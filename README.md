@@ -26,17 +26,11 @@ Forms, AJAX, authenticated content, client-side data loading, and complex URL/pl
 
 1. Open the [latest GitHub release](https://github.com/electricarts/local-static-publisher/releases/latest).
 2. Download the `local-static-publisher-<version>.tgz` asset.
-3. Extract the archive. It contains the `local-static-publisher` add-on folder.
-4. Copy that folder to Local's add-ons directory. On macOS, use:
+3. In Local, open **Add-ons → Installed → Install from disk**.
+4. Select the downloaded `.tgz` file and complete the installation.
+5. Enable Local Static Publisher in the installed add-ons list if it is not enabled automatically.
 
-   ```text
-   ~/Library/Application Support/Local/addons/local-static-publisher
-   ```
-
-   On Windows and Linux, use the per-user add-on directory documented by Local.
-5. Restart Local and enable Local Static Publisher in the add-ons list.
-
-The release archive already contains the compiled JavaScript and bundled runtime dependencies. No npm installation or build step is required.
+The release archive already contains the compiled JavaScript and bundled runtime dependencies. It does not need to be extracted, and no npm installation or build step is required.
 
 ### Build from source
 

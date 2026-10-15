@@ -57,7 +57,7 @@ On Windows and Linux, use the add-on directories documented by Local. Restart Lo
 
 The local site is fetched through its frontend URL, so it must be running during the export.
 
-For “Create local build only”, a folder picker opens before the export. Each export is automatically written to its own subfolder based on the site name and a timestamp, for example `bienenfutter-sb-tankstelle-2026-10-14T18-15-00-000Z`. Earlier builds are preserved.
+For “Create local build only”, a folder picker opens before the export. Each export is automatically written to its own subfolder based on the site name and a timestamp, for example `my-local-site-2026-10-14T18-15-00-000Z`. Earlier builds are preserved.
 
 HTML pages are written as flat files for every export type: `/contact/` becomes `contact.html`, and nested paths use `--` as a separator. Assets retain their directory structure. Internal links point to the exported files, while external links remain unchanged. SFTP and GitHub exports use a temporary local build and publish it afterward. If the configured page limit is reached, the publisher displays a warning and records the skipped pages in `export-manifest.json`.
 
